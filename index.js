@@ -24,6 +24,7 @@ _.each(domains, function(domain){
     sites[domain] = connect();
     sites[domain].use(serveStatic('./sites/'+domain));
     app.use(vhost(domain, sites[domain]));
+    app.use(vhost(domain, 'www.'+sites[domain]));
   })
 
 
