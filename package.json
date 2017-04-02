@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"node index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/bradwbradw/static-sites#readme",
   "dependencies": {
-    "diet": "^0.15.0"
+    "connect": "^3.6.0",
+    "diet": "^0.15.0",
+    "express": "^4.15.2",
+    "lodash": "^4.17.4",
+    "serve-static": "^1.12.1",
+    "vhost": "^3.0.2"
   }
 }
