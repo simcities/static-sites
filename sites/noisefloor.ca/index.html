@@ -1,0 +1,141 @@
+<html>
+<head>
+  <title>NOISEFLOOR</title>
+  <style type="text/css">
+  
+  body{
+    margin:0;
+    background-color: black;
+  }  
+
+  .logo{
+    background-image:url('black-on-transparent.png');
+    background-size: 100% 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:10;
+    width:100%;
+    height:100%;
+  }
+
+
+
+#logo-container{
+  height:380px;
+  width:800px;
+  position:relative;
+  margin-left:auto;
+  margin-right: auto;
+  overflow: hidden;
+  margin-top: 25px;
+}
+
+#logo-container-hider{
+  background-color: black;
+  height:100%;
+  width:100%;
+  z-index:11;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+#big-video-wrap{
+}
+
+#content, #content a, #content a:visited{
+  font-size: 1.5em;
+  color:#ccc;
+  text-decoration: none;
+
+}
+#content{
+  width:80%;
+  position:relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.slowfadein{
+  opacity:0;
+}
+
+#poster-container img{
+  width:40%;
+}
+  </style>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.10.4.min.js"></script>
+<script type="text/javascript" src="imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="video-js/video.js"></script>
+<script type="text/javascript" src="bigvideo/lib/bigvideo.js"></script>
+<!--
+<script type='text/javascript' src='sm/script/soundmanager2.js'></script>
+-->
+</head>
+
+<body>
+
+
+<div id='logo-container'>
+  <div class='stretch logo'></div>
+  <div id='logo-container-hider'></div>
+</div>
+<!--
+<iframe src='http://noisefloor.ca:8011/app/'></iframe>
+-->
+<div id='emailcollect'></div>
+<div id='content' class='slowfadein'><br/>
+<center><img src='nf003.jpg' width="400"></center><br/><br/>
+<iframe width="100%" height="100" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/162296872&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false"></iframe>
+<br/><br/><br/>
+<div id='poster-container'>
+  <img src='nf002.jpg'>
+  <img src='nf001.jpg'>
+</div>
+<a href='https://www.facebook.com/events/348708688644011'>~NF ON FACEBOOK~</a><br/>
+<a href='http://soundcloud.com/noise-floor'>~NF ON SOUNDCLOUD~</a>
+<!--
+<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/107892275&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe> -->
+  </div>
+<script type='text/javascript'>
+
+  $(function() {
+
+      var BV = new $.BigVideo({
+          container: $('#logo-container')
+        });
+      
+      BV.init();
+      var FADE_DELAY = 15000
+      $('#logo-container-hider').fadeTo( FADE_DELAY,0, 'linear');
+      $('.slowfadein').fadeTo(FADE_DELAY,1, 'linear');
+
+      big_video_options = {
+          ambient:true
+
+        };
+      BV.show('noiz.mp4',big_video_options);
+    
+
+    function slowflash(){
+
+    }
+
+//    dancer.play();
+
+
+
+  });
+
+
+
+ 
+</script>
+</body>
+</html>

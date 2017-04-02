@@ -25,6 +25,9 @@ _.each(domains, function(domain){
     sites[domain].use(serveStatic('./sites/'+domain));
     app.use(vhost(domain, sites[domain]));
     app.use(vhost('www.'+domain, sites[domain]));
+    if(port === '8000'){
+      app.use('/'+domain, sites[domain]); 
+    }
   })
 
 
