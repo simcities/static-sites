@@ -1,0 +1,22 @@
+{
+  "name": "static-sites",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bradwbradw/static-sites.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bradwbradw/static-sites/issues"
+  },
+  "homepage": "https://github.com/bradwbradw/static-sites#readme",
+  "dependencies": {
+    "diet": "^0.15.0"
+  }
+}
