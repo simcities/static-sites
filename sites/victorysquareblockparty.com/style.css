@@ -1,0 +1,68 @@
+
+    body{
+        background-color:#fbfc93;
+    }
+
+	img.logo{
+		width: 250px;
+	}
+
+	div#sponsors {
+		width:100%;
+		text-align: center;
+	}
+	div#sponsors img{
+		vertical-align: middle;
+        max-width:80vw;
+	}
+
+    .image-holder{
+        width:100vw;
+        position: relative;
+        margin:0 auto 8em auto;
+        text-align: center;
+    }
+
+	img#main{
+		width:100%;
+	}
+
+	#musicwaste, #and, #citr, #presents{
+
+		display:block;
+		position:relative;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+    .intro {
+        text-align:center;
+        color:#076eb9;
+        font-size:3rem;
+        line-height: 1.9em;
+        padding:0 0.2em;
+        margin: 0.2em 0.2em 1em 0.2em;
+        width:100%
+            display:block;
+    }
+
+    a, a:visited, a:active{
+        color:#076eb9;
+        text-decoration: none;
+        
+    }
+
+    a:hover{
+        color:white;
+        
+    }
+
+
+
+@media screen and (max-width: 800px) { 
+		.image-holder{
+            width:100vw;
+		}
+	}
+
