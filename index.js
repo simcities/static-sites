@@ -2,7 +2,7 @@
 var domains = [
   'cyberspa.biz',
   'noisefloor.ca',
-  'bradwinter.local'
+  'victorysquareblockparty.com'
 ];
 
 var port = process.env.PORT || '8000';
