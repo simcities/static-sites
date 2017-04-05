@@ -15,9 +15,6 @@ var connect = require('connect'),
 
 
 var sites = {};
-_.each(domains, function(domain){
-    sites[domain] = connect();
-  })
 
 var app = connect();
 
@@ -30,7 +27,6 @@ _.each(domains, function(domain){
       app.use('/'+domain, sites[domain]); 
     }
   })
-
 
 app.listen(port);
 console.log('listening on '+port);
