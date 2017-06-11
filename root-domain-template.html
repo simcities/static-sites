@@ -2,5 +2,5 @@
 
   {{#each domains}}
 <p>{{rootDomain}}</p>
-    <a href="http://{{../rootDomain}}/{{this}}">http://{{../rootDomain}}/{{this}}</a><br/>
+    <a href="http://{{this}}">{{this}}</a>  <a href="https://{{this}}">(secure)</a>  <a href="http://{{../rootDomain}}/{{this}}">(preview)</a><br/>
   {{/each}}
