@@ -1,0 +1,44 @@
+
+body {
+    background-color: #FFF1E9;
+}
+body, a{
+    cursor: url(images/cursor.png) 12 12, auto;
+}
+
+#header {
+    width: 100%;
+    text-align: center;
+}
+
+#logo {
+    max-width: 95vw;
+}
+
+#navigation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 1.5em 0 0 0;
+
+}
+
+#navigation li {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+#navigation a {
+    text-align: center;
+    color: #C10F0F;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-family: "Geneva";
+
+}
+
+#corner {
+    padding: 0 0 0 0.5em;
+}
