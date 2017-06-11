@@ -1,11 +1,3 @@
-const domains = [
-  'cyberspa.biz',
-  'noisefloor.ca',
-  'victorysquareblockparty.com',
-  'bradwinter.ca',
-  'wurst.world'
-];
-
 const port = process.env.PORT || '8000';
 
 const express = require('express'),
@@ -15,6 +7,11 @@ const express = require('express'),
   _ = require('lodash'),
   fs = require('fs'),
   handlebars = require('handlebars');
+
+const domains = _.filter(fs.readdirSync(__dirname + '/sites'), domain => {
+    return domain !== '.DS_Store';
+});
+
 
 const rootDomainRobotsTxt = fs.readFileSync(__dirname + '/root-domain-robots.txt').toString();
 const rootDomainTemplate = fs.readFileSync(__dirname + '/root-domain-template.html').toString();
@@ -48,11 +45,11 @@ app.use('/robots.txt', function (req, res) {
 app.use('/', function (req, res) {
   const templateData = {
     rootDomain: _.get(req, 'headers.host'),
-    domains:domains
+    domains: domains
   };
   console.log('get /', req.headers);
   const html = handlebars.compile(rootDomainTemplate)(templateData);
-  res.setHeader('Content-Type','text/html; charset=UTF-8');
+  res.setHeader('Content-Type', 'text/html; charset=UTF-8');
   res.end(html);
 });
 
