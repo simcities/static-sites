@@ -1,14 +1,16 @@
 
-var domains = [
+const domains = [
   'cyberspa.biz',
   'noisefloor.ca',
   'victorysquareblockparty.com',
-  'bradwinter.ca'
+  'bradwinter.ca',
+ // 'imagesearch.marchienveen.com',
+  'wurst.world'
 ];
 
-var port = process.env.PORT || '8000';
+const port = process.env.PORT || '8000';
 
-var connect = require('connect'),
+const connect = require('connect'),
 	serveStatic = require('serve-static'),
 	vhost = require('vhost'),
  	_ = require('lodash');
@@ -18,7 +20,9 @@ var sites = {};
 
 var app = connect();
 
+
 _.each(domains, function(domain){
+    console.log('serving ', domain);
     sites[domain] = connect();
     sites[domain].use(serveStatic('./sites/'+domain));
     app.use(vhost(domain, sites[domain]));
