@@ -37,6 +37,7 @@ _.each(domains, function (domain) {
   app.use('/' + domain, sites[domain]);
 //  }
 });
+/*
 
 app.use('/', function (req, res, next) {
 
@@ -54,6 +55,7 @@ app.use('/', function (req, res, next) {
   res.end(html);
 });
 
+*/
 
 app.use('/robots.txt', function (req, res) {
   res.end(rootDomainRobotsTxt)
