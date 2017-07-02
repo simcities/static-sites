@@ -25,6 +25,7 @@ function track(req, res, next) {
   next();
 };
 
+
 _.each(domains, function (domain) {
   console.log('serving ', domain);
   sites[domain] = connect();
@@ -37,12 +38,12 @@ _.each(domains, function (domain) {
 //  }
 });
 
+app.use('/', function (req, res, next) {
 
-app.use('/robots.txt', function (req, res) {
-  res.end(rootDomainRobotsTxt)
-});
+  if(req.path){
+    next();
+  }
 
-app.use('/', function (req, res) {
   const templateData = {
     rootDomain: _.get(req, 'headers.host'),
     domains: domains
@@ -52,6 +53,12 @@ app.use('/', function (req, res) {
   res.setHeader('Content-Type', 'text/html; charset=UTF-8');
   res.end(html);
 });
+
+
+app.use('/robots.txt', function (req, res) {
+  res.end(rootDomainRobotsTxt)
+});
+
 
 
 app.listen(port);

@@ -9,7 +9,7 @@ body{
 }
 
 body, a {
-    cursor: url(images/cursor.png) 12 12, auto;
+    cursor: url(./images/cursor.png) 12 12, auto;
 }
 
 body * {
@@ -28,7 +28,7 @@ body * {
 #main-container {
     height: 100vh;
     width: 100%;
-    background-image:url('images/wurst-bg.jpg');
+    background-image:url('./images/wurst-bg.jpg');
     background-size: 100% 100%;
     text-align: center;
     overflow:hidden;
@@ -49,7 +49,7 @@ body * {
     height: 100%;
     position: absolute;
     left: 40%;
-    background-image:url('images/vertical logo.png');
+    background-image:url('./images/vertical logo.png');
     background-size: auto 60%;
     background-repeat: no-repeat;
     background-position: center center;
