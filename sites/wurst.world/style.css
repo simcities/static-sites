@@ -2,43 +2,104 @@
 body {
     background-color: #FFF1E9;
 }
-body, a{
+
+body, a {
     cursor: url(images/cursor.png) 12 12, auto;
 }
 
-#header {
-    width: 100%;
-    text-align: center;
+#background {
+/ / image background-color: blue;
 }
 
-#logo {
-    max-width: 95vw;
-}
-
-#navigation {
+#main-container {
+    height: 100vh;
     width: 100%;
+    background-color: black;
+    /*
     display: flex;
     justify-content: center;
-    list-style-type: none;
-    padding: 0;
-    margin: 1.5em 0 0 0;
-
-}
-
-#navigation li {
-    margin-left: 1em;
-    margin-right: 1em;
-}
-
-#navigation a {
+    align-items: center;*/
     text-align: center;
-    color: #C10F0F;
-    letter-spacing: 2px;
-    text-decoration: none;
-    font-family: "Geneva";
-
 }
 
-#corner {
-    padding: 0 0 0 0.5em;
+#main {
+    height: 100%;
+    width: 100%;
+    position:relative;
+    /*
+        display: flex;
+        justify-content: center;
+        align-items: center;*/
+    display: inline-block;
+    background-color: darkblue;
+}
+
+#main div {
+    display: inline-block;
+    height: 100%;
+}
+
+#vertical-logo {
+    width: 20%;
+    position: absolute;
+    left: 40%;
+    min-height: 400px;
+    background-color: white;
+    transition: all 0.5s ease;
+    z-index:2;
+}
+
+.activated #main {
+    /*
+        justify-content: center;*/
+}
+
+.activated #vertical-logo {
+    background-color: pink;
+    position: absolute;
+    left: -200px;
+    /*
+    position: absolute;
+    right: 100%;*/
+}
+
+.activated #content {
+    opacity:100;
+}
+#content {
+    height: 100%;
+    width: 79%;
+    background-color: green;
+    text-align: left;
+    opacity:0;
+    transition: all 0.5s ease;
+}
+
+/* desktop */
+@media (min-width: 420px) {
+    #main {
+        width: 70%;
+        background-color: grey;
+    }
+
+    #content {
+        position:absolute;
+        left:20%;
+    }
+    .activated #main {
+        /*
+                justify-content: flex-start;*/
+    }
+
+    .activated #vertical-logo {
+        position: absolute;
+        left: 0;
+    }
+
+    /*
+        .activated #vertical-logo {
+            position: relative;
+            right: auto;
+        }*/
+
 }
