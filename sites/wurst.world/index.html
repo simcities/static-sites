@@ -4,26 +4,27 @@
   <meta charset="UTF-8">
   <title>U ´ᴥ` U</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body ng-app="ww">
 
-
-<div id="background">
-
-</div>
-
 <div id="main-container" ng-controller="main" ng-class="{activated:active}">
   <div id="main">
-    <div id="vertical-logo" ng-click="active = !active" >
-      ww {{hi}}
+    <div id="vertical-logo" ng-click="active = true">
+
     </div>
-    <div id="content" >
-      content content
+    <div id="content">
+      <div id="about">
+        <p><i>Wurst</i> is a series of design projects led by interdisciplinary artist Marchien Veen. <i>Wurst</i> will debut as a collaborative publication focusing on computer generated art and digital ephemera.
+
+
+        <p>For inquiries please contact
+        wurstworld@gmail.com
+      </div>
     </div>
   </div>
-</div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
@@ -32,9 +33,7 @@
 <script type="text/javascript">
 
   angular.module('ww', [])
-      .controller('main', function ($scope) {
-//        $scope.active = true;
-        $scope.hi = 'hello';
+      .controller('main', function () {
       })
 </script>
 </body>
