@@ -97,6 +97,7 @@ body * {
     letter-spacing: 4px;
     line-height:1.5em;
     padding-top:2em;
+    overflow: scroll;
 }
 
 /* desktop */
